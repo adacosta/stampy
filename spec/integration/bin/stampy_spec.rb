@@ -18,7 +18,7 @@ describe "bin/stampy" do
       let(:valid_input_alternate) { 12 }
       let(:input) { "#{valid_input}, #{valid_input_alternate}" }
 
-      it { executes_using_the_first_input }
+      it { executes_with_the_first_input }
     end
 
     private

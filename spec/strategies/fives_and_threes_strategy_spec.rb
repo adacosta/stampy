@@ -1,7 +1,7 @@
 require_relative '../spec_helper'
 
-describe FivesAndThreesStrategy do
-  let(:strategy_class) { FivesAndThreesStrategy }
+describe Stampy::Strategies::FivesAndThreesStrategy do
+  let(:strategy_class) { Stampy::Strategies::FivesAndThreesStrategy }
 
   context "#initialize" do
     subject { strategy_class.new(input) }

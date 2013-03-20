@@ -1,7 +1,7 @@
 require_relative '../spec_helper'
 
-describe StampPresenter do
-  let(:stamp_presenter_class) { StampPresenter }
+describe Stampy::Presenters::StampPresenter do
+  let(:stamp_presenter_class) { Stampy::Presenters::StampPresenter }
 
   context "#humanize" do
     subject { stamp_presenter_for_stamps(stamps).humanize }

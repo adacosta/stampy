@@ -1,12 +1,14 @@
 require_relative 'spec_helper'
 
-describe Interactor do
+describe Stampy::Interactor do
   let(:valid_input) { 8 }
+  let(:strategy) { Stampy::Strategies::FivesAndThreesStrategy }
+  let(:presenter) { Stampy::Presenters::StampPresenter }
 
   context "#initialize" do
     let(:input) { valid_input }
 
-    subject { Interactor.new(input) }
+    subject { Stampy::Interactor.new(input) }
 
     it { has_fives_and_threes_strategy_as_default }
     it { has_stamp_presenter_as_default }
@@ -14,11 +16,11 @@ describe Interactor do
     private
 
     def has_fives_and_threes_strategy_as_default
-      subject.strategy.should be FivesAndThreesStrategy
+      subject.strategy.should be strategy
     end
 
     def has_stamp_presenter_as_default
-      subject.presenter.should be StampPresenter
+      subject.presenter.should be presenter
     end
   end
 
@@ -26,7 +28,7 @@ describe Interactor do
     context "when input is valid for FivesAndThreesStrategy and StampPresenter" do
       let(:input) { valid_input }
 
-      subject { Interactor.new(input, FivesAndThreesStrategy, StampPresenter).calculate_and_humanize_input }
+      subject { Stampy::Interactor.new(input, strategy, presenter).calculate_and_humanize_input }
 
       it { has_one_five_cent_stamp_and_one_three_cent_stamp }
 
