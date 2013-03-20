@@ -3,3 +3,4 @@ $:.unshift(File.dirname(__FILE__)) unless
 
 require File.join('stampy', 'strategies', 'fives_and_threes_strategy')
 require File.join('stampy', 'presenters', 'stamp_presenter')
+require File.join('stampy', 'interactor')
