@@ -1,4 +1,4 @@
-class ThreesAndFivesStrategy
+class FivesAndThreesStrategy
   def initialize(input)
     @threes = 0
     @fives = 0

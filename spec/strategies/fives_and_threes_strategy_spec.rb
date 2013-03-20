@@ -1,10 +1,10 @@
 require_relative '../spec_helper'
 
-describe ThreesAndFivesStrategy do
-  let(:strategy_class) { ThreesAndFivesStrategy }
+describe FivesAndThreesStrategy do
+  let(:strategy_class) { FivesAndThreesStrategy }
 
   context "#calculate" do
-    subject { combination_of_3s_and_5s_for_input(input) }
+    subject { combination_of_fives_and_threes_for_input(input) }
 
     context "when input is 8" do
       let(:input) { 8 }
@@ -74,7 +74,7 @@ describe ThreesAndFivesStrategy do
 
     private
 
-    def combination_of_3s_and_5s_for_input(input)
+    def combination_of_fives_and_threes_for_input(input)
       strategy_class.new(input).
         calculate
     end
@@ -121,8 +121,8 @@ describe ThreesAndFivesStrategy do
 
     def has_a_sum_of_5s_and_3s_which_equal_input
       inputs.each do |input|
-        combination_of_3s_and_5s = combination_of_3s_and_5s_for_input(input)
-        combination_sum = (5 * combination_of_3s_and_5s['five']) + (3 * combination_of_3s_and_5s['three'])
+        combination_of_fives_and_threes = combination_of_fives_and_threes_for_input(input)
+        combination_sum = (5 * combination_of_fives_and_threes['five']) + (3 * combination_of_fives_and_threes['three'])
         combination_sum.should == input
       end
     end
