@@ -1,9 +1,9 @@
 require_relative '../spec_helper'
 
-describe DefaultStrategy do
-  let(:strategy_class) { DefaultStrategy }
+describe ThreesAndFivesStrategy do
+  let(:strategy_class) { ThreesAndFivesStrategy }
 
-  context "#combination_of_3s_and_5s" do
+  context "#calculate" do
     subject { combination_of_3s_and_5s_for_input(input) }
 
     context "when input is 8" do
@@ -76,7 +76,7 @@ describe DefaultStrategy do
 
     def combination_of_3s_and_5s_for_input(input)
       strategy_class.new(input).
-        combination_of_3s_and_5s
+        calculate
     end
 
     def has_one_5_and_one_3

@@ -1,11 +1,11 @@
-class DefaultStrategy
+class ThreesAndFivesStrategy
   def initialize(input)
     @threes = 0
     @fives = 0
     @input = input
   end
 
-  def combination_of_3s_and_5s
+  def calculate
     if fives_remainder == 0
       @fives = @input / 5
     elsif fives_remainder == 2

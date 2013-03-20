@@ -21,4 +21,4 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
-require_relative File.join('..', 'lib', 'combinations_of_3s_and_5s')
+require_relative File.join('..', 'lib', 'stampy')
