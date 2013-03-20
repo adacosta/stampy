@@ -3,6 +3,34 @@ require_relative '../spec_helper'
 describe FivesAndThreesStrategy do
   let(:strategy_class) { FivesAndThreesStrategy }
 
+  context "#initialize" do
+    subject { strategy_class.new(input) }
+
+    context "when input is less than 8" do
+      let(:input) { 7 }
+
+      it { raises_argument_error }
+    end
+
+    context "when input is a string" do
+      let(:input) { 'invalid' }
+
+      it { raises_argument_error }
+    end
+
+    context "when input is nil" do
+      let(:input) { nil }
+
+      it { raises_argument_error }
+    end
+
+    private
+
+    def raises_argument_error
+      expect { subject }.to raise_error(ArgumentError, "input must be >= 8")
+    end
+  end
+
   context "#calculate" do
     subject { combination_of_fives_and_threes_for_input(input) }
 

@@ -2,7 +2,8 @@ class FivesAndThreesStrategy
   def initialize(input)
     @threes = 0
     @fives = 0
-    @input = input
+    @input = input.to_i
+    validate_input
   end
 
   def calculate
@@ -22,6 +23,10 @@ class FivesAndThreesStrategy
   end
 
   private
+
+  def validate_input
+    raise(ArgumentError, "input must be >= 8") if @input < 8
+  end
 
   def fives_remainder
     @input % 5
