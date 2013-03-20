@@ -18,7 +18,7 @@ class ThreesAndFivesStrategy
       @fives = (@input / 5) - 1
       @threes = (@input - fives_sum) / 3
     end
-    {'5' => @fives, '3' => @threes}
+    {'five' => @fives, 'three' => @threes}
   end
 
   private

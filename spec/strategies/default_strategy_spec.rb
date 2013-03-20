@@ -80,49 +80,49 @@ describe ThreesAndFivesStrategy do
     end
 
     def has_one_5_and_one_3
-      subject.should == {"5" => 1, "3" => 1}
+      subject.should == {'five' => 1, 'three' => 1}
     end
 
     def has_no_5s_and_three_3s
-      subject.should == {"5" => 0, "3" => 3}
+      subject.should == {'five' => 0, 'three' => 3}
     end
 
     def has_two_5s_and_no_3s
-      subject.should == {"5" => 2, "3" => 0}
+      subject.should == {'five' => 2, 'three' => 0}
     end
 
     def has_one_5_and_two_3s
-      subject.should == {"5" => 1, "3" => 2}
+      subject.should == {'five' => 1, 'three' => 2}
     end
 
     def has_no_5s_and_four_3s
-      subject.should == {"5" => 0, "3" => 4}
+      subject.should == {'five' => 0, 'three' => 4}
     end
 
     def has_two_5s_and_one_3
-      subject.should == {"5" => 2, "3" => 1}
+      subject.should == {'five' => 2, 'three' => 1}
     end
 
     def has_one_5_and_three_3s
-      subject.should == {"5" => 1, "3" => 3}
+      subject.should == {'five' => 1, 'three' => 3}
     end
 
     def has_three_5s_and_no_threes
-      subject.should == {"5" => 3, "3" => 0}
+      subject.should == {'five' => 3, 'three' => 0}
     end
 
     def has_two_5s_and_two_3s
-      subject.should == {"5" => 2, "3" => 2}
+      subject.should == {'five' => 2, 'three' => 2}
     end
 
     def has_one_5_and_four_3s
-      subject.should == {"5" => 1, "3" => 4}
+      subject.should == {'five' => 1, 'three' => 4}
     end
 
     def has_a_sum_of_5s_and_3s_which_equal_input
       inputs.each do |input|
         combination_of_3s_and_5s = combination_of_3s_and_5s_for_input(input)
-        combination_sum = (5 * combination_of_3s_and_5s['5']) + (3 * combination_of_3s_and_5s['3'])
+        combination_sum = (5 * combination_of_3s_and_5s['five']) + (3 * combination_of_3s_and_5s['three'])
         combination_sum.should == input
       end
     end
