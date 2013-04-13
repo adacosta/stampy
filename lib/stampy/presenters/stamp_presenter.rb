@@ -13,8 +13,6 @@ module Stampy
 
       def humanize_stamp(stamp_name, stamp_count)
         case stamp_count
-        when 0
-          "0 #{stamp_name} cent stamps"
         when 1
           "1 #{stamp_name} cent stamp"
         else
