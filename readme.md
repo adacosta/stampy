@@ -23,3 +23,7 @@ stampy.rb has been placed in bin/
 
   bundle
   rspec
+
+# License
+
+MIT
